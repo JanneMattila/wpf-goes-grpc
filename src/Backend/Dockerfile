@@ -1,14 +1,14 @@
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.0-buster-slim AS base
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.0.0-alpine3.9 AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
+ENV ASPNETCORE_URLS=http://+:80;https://+:443
 
-FROM mcr.microsoft.com/dotnet/core/sdk:3.0-buster AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:3.0.100-buster AS build
 WORKDIR /src
-COPY ["src/Backend/Backend.csproj", "src/Backend/"]
-RUN dotnet restore "src/Backend/Backend.csproj"
+COPY "Backend.csproj" .
+RUN dotnet restore "Backend.csproj"
 COPY . .
-WORKDIR "/src/src/Backend"
 RUN dotnet build "Backend.csproj" -c Release -o /app/build
 
 FROM build AS publish

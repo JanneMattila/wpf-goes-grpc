@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{98AA6290-9A7F-494D-B071-14C6A51D8629}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{1DB9606E-2B3E-43F6-926A-47B25B93997F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc", "doc", "{472A3A16-60F5-478A-A6FD-F513131A805D}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "deploy", "deploy", "{ECC8AD22-F728-4465-9C9A-F97B0DE7F975}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "unit", "unit", "{E71526B5-8EDE-41F7-96AC-547BAE1E89BD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "release", "release", "{F5A1D2E4-ED8D-424A-A8EC-DEE13BF98566}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E71526B5-8EDE-41F7-96AC-547BAE1E89BD} = {1DB9606E-2B3E-43F6-926A-47B25B93997F}
+		{F5A1D2E4-ED8D-424A-A8EC-DEE13BF98566} = {1DB9606E-2B3E-43F6-926A-47B25B93997F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2FE272A2-DCA6-42ED-B4A2-C3D191055D54}
+	EndGlobalSection
+EndGlobal

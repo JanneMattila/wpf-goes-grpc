@@ -8,18 +8,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="grpcbackend.pfx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="grpcbackend.pfx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Grpc.AspNetCore" Version="2.23.1" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.9.5" />
   </ItemGroup>
 
   <ItemGroup>
-    <Protobuf Include="..\Shared\greet.proto" GrpcServices="Server">
-      <Link>Protos\greet.proto</Link>
-    </Protobuf>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Protos\" />
+    <Protobuf Include="Protos\greet.proto" GrpcServices="Server" />
   </ItemGroup>
 
 </Project>

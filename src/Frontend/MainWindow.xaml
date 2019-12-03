@@ -1,0 +1,15 @@
+﻿<Window x:Class="Frontend.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Frontend"
+        mc:Ignorable="d"
+        Title="WPF Front calling gRPC Backend" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="BackendAddress" HorizontalAlignment="Left" Margin="10,10,0,0" Text="https://localhost:5001" TextWrapping="Wrap" VerticalAlignment="Top" Width="600"/>
+        <Button Content="Say Hello" HorizontalAlignment="Left" Margin="10,55,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <TextBox x:Name="SayHelloResponse" HorizontalAlignment="Left" Margin="78,55,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="256"/>
+
+    </Grid>
+</Window>

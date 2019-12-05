@@ -1,10 +1,10 @@
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.0.0-alpine3.9 AS base
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1.0-alpine3.10 AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 ENV ASPNETCORE_URLS=http://+:80;https://+:443
 
-FROM mcr.microsoft.com/dotnet/core/sdk:3.0.100-buster AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1.100-buster AS build
 WORKDIR /src
 COPY "Backend.csproj" .
 RUN dotnet restore "Backend.csproj"

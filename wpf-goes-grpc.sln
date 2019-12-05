@@ -10,6 +10,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc", "doc", "{472A3A16-60F5-478A-A6FD-F513131A805D}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+		azure-pipelines.yml = azure-pipelines.yml
 		LICENSE = LICENSE
 		README.md = README.md
 	EndProjectSection
@@ -20,11 +21,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "unit", "unit", "{E71526B5-8
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "release", "release", "{F5A1D2E4-ED8D-424A-A8EC-DEE13BF98566}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backend", "src\Backend\Backend.csproj", "{76AFF9A8-CA49-44FE-910E-EA6AD67635B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Backend", "src\Backend\Backend.csproj", "{76AFF9A8-CA49-44FE-910E-EA6AD67635B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frontend", "src\Frontend\Frontend.csproj", "{5248ECB1-48BD-402F-99FD-FDCC898EEEED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frontend", "src\Frontend\Frontend.csproj", "{5248ECB1-48BD-402F-99FD-FDCC898EEEED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "src\Shared\Shared.csproj", "{60F013AD-BB92-4129-A04F-9D4A8EBA722B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "src\Shared\Shared.csproj", "{60F013AD-BB92-4129-A04F-9D4A8EBA722B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

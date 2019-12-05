@@ -2,6 +2,12 @@
 
 Example WPF application which calls backend gRPC server.
 
+## Build Status
+
+[![Build Status](https://jannemattila.visualstudio.com/jannemattila/_apis/build/status/JanneMattila.QuizMaker?branchName=master)](https://jannemattila.visualstudio.com/jannemattila/_build/latest?definitionId=44&branchName=master)
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 ## Instructions
 
 ### Important notice about certificates

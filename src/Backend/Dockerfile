@@ -1,20 +1,23 @@
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1.0-alpine3.10 AS base
+# Th# This Dockerfile contains Build and Release steps:
+# 1. Build image(https://hub.docker.com/_/microsoft-dotnet-core-sdk/)
+FROM mcr.microsoft.com/dotnet/sdk:6.0.400-bullseye-slim-amd64 AS build
+WORKDIR /source
+
+# Cache nuget restore
+COPY "Backend.csproj" .
+RUN dotnet restore "Backend.csproj"
+
+# Copy sources and compile
+COPY . .
+RUN dotnet publish "Backend.csproj" --output /app --configuration Release
+
+# 2. Release image
+FROM mcr.microsoft.com/dotnet/aspnet:6.0.8-bullseye-slim-amd64
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 ENV ASPNETCORE_URLS=http://+:80;https://+:443
 
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1.100-buster AS build
-WORKDIR /src
-COPY "Backend.csproj" .
-RUN dotnet restore "Backend.csproj"
-COPY . .
-RUN dotnet build "Backend.csproj" -c Release -o /app/build
-
-FROM build AS publish
-RUN dotnet publish "Backend.csproj" -c Release -o /app/publish
-
-FROM base AS final
-WORKDIR /app
-COPY --from=publish /app/publish .
+# Copy content from Build image
+COPY --from=build /app .
 ENTRYPOINT ["dotnet", "Backend.dll"]
